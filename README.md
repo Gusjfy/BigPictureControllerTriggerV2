@@ -78,7 +78,7 @@ Este script usa o módulo `AudioDeviceCmdlets` do PowerShell para alterar a saí
 
 ## ⚠️ Alerta do Windows Defender
 
-Durante a build para `.exe`, **o Windows Defender pode detectar o executável como um Trojan (falso positivo)**.
+Caso o script pare de funcionar, é porque **o Windows Defender detectou o executável como um Trojan (falso positivo)**.
 
 Isso acontece por alguns motivos:
 - O script **acessa processos do sistema** (para detectar se a Steam está rodando).
@@ -86,8 +86,7 @@ Isso acontece por alguns motivos:
 - O código é empacotado em um único `.exe` com `PyInstaller`, que é uma técnica frequentemente usada por malwares.
 
 **Como resolver:**
-- Você pode permitir manualmente o `.exe` na quarentena do Windows Defender.
-- Ou clonar o repositório e rodar o script diretamente com Python, sem gerar um `.exe`.
+- Você deve permitir manualmente o `.exe` na quarentena do Windows Defender.
 
 > Nenhuma parte do código realiza atividades maliciosas. Todo o comportamento é transparente e focado apenas em automação local para jogos.
 
@@ -97,14 +96,13 @@ Isso acontece por alguns motivos:
 
 Se você quiser que o script seja executado automaticamente ao ligar o computador, siga os passos abaixo:
 
-1. Compile o script `.py` para `.exe` (veja instruções no item "Build Command").
-2. Copie o `.exe` gerado para um local fixo, como:  
+1. Copie o `.exe` gerado para um local fixo, como:  
    `C:\Users\SeuUsuario\AppData\Local\Programs\SteamBigPictureTrigger\`
-3. Pressione `Win + R`, digite `shell:startup` e pressione Enter.
-4. Na pasta que abrir, crie um **atalho** para o seu `.exe`.
-5. Pronto! Agora, o script será iniciado automaticamente com o Windows.
+2. Pressione `Win + R`, digite `shell:startup` e pressione Enter.
+3. Na pasta que abrir, **copie e cole** seu `.exe`.
+4. Pronto! Agora, o script será iniciado automaticamente com o Windows.
 
-> 💡 **Dica:** Você pode configurar esse atalho para "Executar minimizado", evitando que a janela apareça momentaneamente.
+> 💡 **Dica:** Você pode criar um atalho no lugar de copiar e adicionar na pasta. Caso o windows defender coloque em quarentena, será apenas no local do `.exe`.
 
 ---
 
