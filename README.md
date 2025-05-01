@@ -37,7 +37,7 @@ Controles que **não usam XInput** não serão detectados:
 ## 🚀 Como usar
 
 1. Clone este repositório.
-2. Edite a variável `TV_AUDIO_NAME` no script `script_bp_steam.py` para corresponder ao primeiro nome/palavra da sua saída de áudio (ex: `"SAMSUNG"`). Para saber qual o nome da saida de audio, instale o modulo do proximo AudioDeviceCmdlets tópico.
+2. Edite a variável `TV_AUDIO_NAME` no script `script_bp_steam.py` para corresponder ao primeiro nome/palavra da sua saída de áudio (ex: `"SAMSUNG"`). Para saber qual o nome da saida de audio, instale o modulo AudioDeviceCmdlets do proximo tópico.
 3. Use o comando de build descrito no arquivo `Build Command.txt` para empacotar o script como um `.exe`.
 
 O script ficará rodando em **segundo plano**. Quando detectar que o controle foi conectado, ele:
